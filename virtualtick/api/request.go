@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+//持续刷新信息
 func ReqeustBasicGameInfo()  {
 	resp, err := http.Get("http://127.0.0.1:21337/positional-rectangles")
 	if err != nil {
@@ -34,6 +35,7 @@ func ReqeustBasicGameInfo()  {
 	NowRectanglesAPI = b2.Rectangles
 }
 
+//更新一次信息
 func (b *BasicGameInfo)RequestNewInfo() *BasicGameInfo {
 	resp, err := http.Get("http://127.0.0.1:21337/positional-rectangles")
 	if err != nil {

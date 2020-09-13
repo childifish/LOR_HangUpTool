@@ -28,6 +28,9 @@ func (a *Attack)Attack(n int)  {
 	if n <1 {
 		return
 	}
+	if n >5{
+		n = 5
+	}
 	p := Position{
 		x: unitSlice[n-1],
 		y: 900,
